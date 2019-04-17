@@ -1,0 +1,37 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectName="volume"
+ProjectDir="F:\Users\sundevil\Desktop\lab02_TI_files\asmC\"
+ProjectType=Executable
+CPUFamily=TMS320C55XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\..\..\ti\c5500\cgtools\lib\rts55x.lib"
+Source="asmc.c"
+Source="sumtwo.asm"
+Source="asmc.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -as -fr"F:\Users\sundevil\Desktop\lab02_TI_files\asmC\Debug" -ml -v5510:2
+
+["Compiler" Settings: "Release"]
+Options=-mg -as -fr"F:\Users\sundevil\Desktop\lab02_TI_files\asmC\Release" -ml -v5510:2
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v55
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v55
+
+["Linker" Settings: "Debug"]
+Options=-c -o".\Debug\volume.out" -x
+
+["Linker" Settings: "Release"]
+Options=-c -o".\Release\volume.out" -x
+

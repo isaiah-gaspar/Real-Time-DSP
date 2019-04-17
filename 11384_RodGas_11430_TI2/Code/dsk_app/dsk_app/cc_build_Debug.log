@@ -1,0 +1,13 @@
+----------------------------  dsk_app1.pjt - Debug  ----------------------------
+"c:\ti\plugins\bios\gconfgen" dsk_app1.cdb
+
+"c:\ti\c5500\cgtools\bin\cl55" -g -mg -q -o0 -fr"./Debug" -i"." -d"_DEBUG" -mb -ml -mn -v5510:2 -@"Debug.lkf" "dsk_app1.c"
+
+"c:\ti\c5500\cgtools\bin\cl55" -g -mg -q -o0 -fr"./Debug" -i"." -d"_DEBUG" -mb -ml -mn -v5510:2 -@"Debug.lkf" "dsk_app1cfg.s55"
+
+"c:\ti\c5500\cgtools\bin\cl55" -g -mg -q -o0 -fr"./Debug" -i"." -d"_DEBUG" -mb -ml -mn -v5510:2 -@"Debug.lkf" "dsk_app1cfg_c.c"
+
+"c:\ti\c5500\cgtools\bin\cl55" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

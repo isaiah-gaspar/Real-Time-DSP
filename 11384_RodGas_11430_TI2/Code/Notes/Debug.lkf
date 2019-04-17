@@ -1,0 +1,7 @@
+-z -q -c -o"./Debug/tone.out" -x -i"f:/ti/C5500/bios/lib" -i"f:/ti/C5500/dsk5510/lib" -i"f:/ti/c5500/rtdx/lib" -i"f:/ti/c5500/cgtools/lib" -l"dsk5510bslx.lib"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\Debug\asmADSR.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\Debug\asmrounddown.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\Debug\tone.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\Debug\tonecfg.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\Debug\tonecfg_c.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\Notes\tonecfg.cmd"

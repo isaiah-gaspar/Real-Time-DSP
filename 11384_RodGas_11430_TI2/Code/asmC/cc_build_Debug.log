@@ -1,0 +1,11 @@
+------------------------------  asmc.pjt - Debug  ------------------------------
+"f:\ti\c5500\cgtools\bin\cl55" -g -as -fr"F:/Users/sundevil/Desktop/lab02_TI_files/asmC/Debug" -ml -v5510:2 -@"Debug.lkf" "asmc.c"
+"asmc.c", line 16: warning: variable "sum" was set but never used
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -as -fr"F:/Users/sundevil/Desktop/lab02_TI_files/asmC/Debug" -ml -v5510:2 -@"Debug.lkf" "sumtwo.asm"
+
+"f:\ti\c5500\cgtools\bin\cl55" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.

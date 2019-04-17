@@ -1,0 +1,6 @@
+-z -q -c -o"./Debug/dsk_app1.out" -x -i"c:/ti/C5500/bios/lib" -i"c:/ti/C5500/dsk5510/lib" -i"c:/ti/c5500/rtdx/lib" -i"c:/ti/c5500/cgtools/lib" -l"dsk5510bslx.lib"
+"C:\ti\c5500\dsplib\55xdspx.lib"
+"C:\ti\examples\dsk5510\bsl\dsk_app\Debug\dsk_app1.obj"
+"C:\ti\examples\dsk5510\bsl\dsk_app\Debug\dsk_app1cfg.obj"
+"C:\ti\examples\dsk5510\bsl\dsk_app\Debug\dsk_app1cfg_c.obj"
+"C:\ti\examples\dsk5510\bsl\dsk_app\userlinker_app1.cmd"

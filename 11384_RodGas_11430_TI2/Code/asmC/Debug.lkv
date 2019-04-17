@@ -1,0 +1,5 @@
+-z -c -o"./Debug/volume.out" -x -i"f:/ti/C5500/bios/lib" -i"f:/ti/C5500/dsk5510/lib" -i"f:/ti/c5500/rtdx/lib" -i"f:/ti/c5500/cgtools/lib"
+"F:\ti\c5500\cgtools\lib\rts55x.lib"
+"F:\Users\sundevil\Desktop\lab02_TI_files\asmC\Debug\asmc.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\asmC\Debug\sumtwo.obj"
+"F:\Users\sundevil\Desktop\lab02_TI_files\asmC\asmc.cmd"
