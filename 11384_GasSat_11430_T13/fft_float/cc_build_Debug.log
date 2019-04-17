@@ -1,0 +1,11 @@
+---------------------------  test_fft_f.pjt - Debug  ---------------------------
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/fft_float/Debug" -d"_DEBUG" -@"Debug.lkf" "fbit_rev.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/fft_float/Debug" -d"_DEBUG" -@"Debug.lkf" "fft_float.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/fft_float/Debug" -d"_DEBUG" -@"Debug.lkf" "test_fft.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

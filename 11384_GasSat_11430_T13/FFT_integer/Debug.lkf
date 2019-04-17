@@ -1,0 +1,6 @@
+-z -q -c -o"./Debug/test_fft_i.out" -x -i"f:/ti/C5500/bios/lib" -i"f:/ti/C5500/dsk5510/lib" -i"f:/ti/c5500/rtdx/lib" -i"f:/ti/c5500/cgtools/lib"
+"F:\ti\c5500\cgtools\lib\rts55.lib"
+"F:\Users\sundevil\Desktop\Lab3_TI\FFT_integer\Debug\fft_integer.obj"
+"F:\Users\sundevil\Desktop\Lab3_TI\FFT_integer\Debug\ibit_rev.obj"
+"F:\Users\sundevil\Desktop\Lab3_TI\FFT_integer\Debug\test_fft_i.obj"
+"F:\Users\sundevil\Desktop\Lab3_TI\FFT_integer\exp9.cmd"

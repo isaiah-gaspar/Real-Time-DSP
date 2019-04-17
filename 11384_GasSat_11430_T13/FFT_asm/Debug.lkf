@@ -1,0 +1,7 @@
+-z -q -c -o"./Debug/test_fft_a.out" -x -i"f:/ti/C5500/bios/lib" -i"f:/ti/C5500/dsk5510/lib" -i"f:/ti/c5500/rtdx/lib" -i"f:/ti/c5500/cgtools/lib"
+"F:\ti\c5500\cgtools\lib\rts55.lib"
+"G:\TI Lab 3\Lab3_TI\FFT_asm\Debug\bit_rev.obj"
+"G:\TI Lab 3\Lab3_TI\FFT_asm\Debug\fft.obj"
+"G:\TI Lab 3\Lab3_TI\FFT_asm\Debug\test_fft_a.obj"
+"G:\TI Lab 3\Lab3_TI\FFT_asm\Debug\w_table.obj"
+"G:\TI Lab 3\Lab3_TI\FFT_asm\exp9.cmd"

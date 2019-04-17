@@ -1,0 +1,128 @@
+---------------------------  test_fft_a.pjt - Debug  ---------------------------
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"G:/TI Lab 3/Lab3_TI/FFT_asm/Debug" -d"_DEBUG" -@"Debug.lkf" "bit_rev.asm"
+"bit_rev.asm", REMARK   at line 19: [R5673] If accumulator shift left operation
+                                            overflows, M40 == 0, SXMD == 0, and
+                                            C54CM == 0, then the shift
+                                            operation may not yield the
+                                            appropriate saturated result; (see
+                                            the C55x silicon exceptions errata;
+                                            Advisory CPU_89)
+	    sfts AC0,T0	             ; T0=EXP, AC0=N=2^EXP
+
+"bit_rev.asm", REMARK   at line 31: [R5688] A localrepeat may be corrupted when
+                                            C54CM == 1 (see the C55x silicon
+                                            exceptions errata; Advisory CPU_85)
+	 || rptblocal loop_end-1     ; port of ||  rptblocal loop_end-1     
+
+"bit_rev.asm", REMARK   at line 43: [R5601] MMR writes to ST0 and ST2 are not
+                                            pipeline protected against
+                                            interrupts (see the C55x silicon
+                                            exceptions errata; Advisory CPU_75)
+	    pop  mmap(ST2_55)        ; Restore ST2
+
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"G:/TI Lab 3/Lab3_TI/FFT_asm/Debug" -d"_DEBUG" -@"Debug.lkf" "fft.asm"
+"fft.asm", REMARK   at line 45: [R5650] Be sure you are familiar with rev 1.0
+                                        silicon errata advisory CPU_68 before
+                                        reading the BRAF bit from ST1
+	    mov  mmap(ST1_55),AR2       ; Save ST1,ST3 to AR2 and AR3
+
+"fft.asm", REMARK   at line 52: [R5503] This instruction will not behave
+                                        correctly when it follows the MMR write
+                                        of SP/SSP on line 48 and interrupts are
+                                        enabled. Ensure at least 4 cycles occur
+                                        between these two instructions. (see
+                                        the C55x silicon exceptions errata;
+                                        Advisory CPU_84)
+	    xcc  do_scale,TC1
+
+"fft.asm", REMARK   at line 59: [R5673] If accumulator shift left operation
+                                        overflows, M40 == 0, SXMD == 0, and
+                                        C54CM == 0, then the shift operation
+                                        may not yield the appropriate saturated
+                                        result; (see the C55x silicon
+                                        exceptions errata; Advisory CPU_89)
+	||  sfts AC0,T0                 ; T0=EXP
+
+"fft.asm", REMARK   at line 71: [R5673] If accumulator shift left operation
+                                        overflows, M40 == 0, SXMD == 0, and
+                                        C54CM == 0, then the shift operation
+                                        may not yield the appropriate saturated
+                                        result; (see the C55x silicon
+                                        exceptions errata; Advisory CPU_89)
+	    sfts AC0,T0                 ;       the index to the buffer
+
+"fft.asm", REMARK   at line 85: [R5688] A localrepeat may be corrupted when
+                                        C54CM == 1 (see the C55x silicon
+                                        exceptions errata; Advisory CPU_85)
+	 || rptblocal mid_loop-1        ; port of ||  rptblocal mid_loop-1        
+
+"fft.asm", REMARK   at line 91: [R5688] A localrepeat may be corrupted when
+                                        C54CM == 1 (see the C55x silicon
+                                        exceptions errata; Advisory CPU_85)
+	 || rptblocal inner_loop-1      ; port of ||  rptblocal inner_loop-1      
+
+"fft.asm", REMARK   at line 98: [R5503] This instruction will not behave
+                                        correctly when it follows the MMR write
+                                        of SP/SSP on line 96 and interrupts are
+                                        enabled. Ensure at least 4 cycles occur
+                                        between these two instructions. (see
+                                        the C55x silicon exceptions errata;
+                                        Advisory CPU_84)
+	    xcc  scale,TC1
+
+"fft.asm", REMARK   at line 98: [R5505] This instruction will not behave
+                                        correctly when it follows the MMR read
+                                        of SP/SSP on line 96 and interrupts are
+                                        enabled. Ensure at least 2 cycles occur
+                                        between these two instructions. (see
+                                        the C55x silicon exceptions errata;
+                                        Advisory CPU_84)
+	    xcc  scale,TC1
+
+"fft.asm", REMARK   at line 98: [R5505] This instruction will not behave
+                                        correctly when it follows the MMR read
+                                        of SP/SSP on line 94 and interrupts are
+                                        enabled. Ensure at least 2 cycles occur
+                                        between these two instructions. (see
+                                        the C55x silicon exceptions errata;
+                                        Advisory CPU_84)
+	    xcc  scale,TC1
+
+"fft.asm", REMARK   at line 108: [R5573] Any BKxx and BSAxx updates are not
+                                         pipline protected against MAR
+                                         operations within 5 cycles (see line
+                                         106) (see the C55x silicon exceptions
+                                         errata; Advisory CPU_43)
+	    amar *CDP+
+
+"fft.asm", REMARK   at line 109: [R5573] Any BKxx and BSAxx updates are not
+                                         pipline protected against MAR
+                                         operations within 5 cycles (see line
+                                         106) (see the C55x silicon exceptions
+                                         errata; Advisory CPU_43)
+	    amar *CDP+                  ; Update k for pointer to U[k]
+
+"fft.asm", REMARK   at line 113: [R5571] This instruction may corrupt the carry
+                                         bit if the M40 bit is set (see the
+                                         C55x silicon exceptions errata;
+                                         Advisory CPU_41)
+	    add  #1,fft.d_L             ; Update L
+
+"fft.asm", REMARK   at line 118: [R5640] The call/return on line 122 may be
+                                         affected by this direct write if it
+                                         writes to the C54CM bit of ST1 (see
+                                         the C55x silicon exceptions errata;
+                                         Advisory CPU_66)
+	    mov  AR2,mmap(ST1_55)
+
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"G:/TI Lab 3/Lab3_TI/FFT_asm/Debug" -d"_DEBUG" -@"Debug.lkf" "test_fft_a.c"
+"sine.dat", line 130: warning: last line of file ends without a newline
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"G:/TI Lab 3/Lab3_TI/FFT_asm/Debug" -d"_DEBUG" -@"Debug.lkf" "w_table.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 1 Warnings, 16 Remarks.

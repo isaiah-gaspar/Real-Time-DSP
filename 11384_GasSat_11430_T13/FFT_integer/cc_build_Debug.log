@@ -1,0 +1,11 @@
+---------------------------  test_fft_i.pjt - Debug  ---------------------------
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/FFT_integer/Debug" -d"_DEBUG" -@"Debug.lkf" "fft_integer.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/FFT_integer/Debug" -d"_DEBUG" -@"Debug.lkf" "ibit_rev.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -g -q -fr"F:/Users/sundevil/Desktop/Lab3_TI/FFT_integer/Debug" -d"_DEBUG" -@"Debug.lkf" "test_fft_i.c"
+
+"f:\ti\c5500\cgtools\bin\cl55" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.
